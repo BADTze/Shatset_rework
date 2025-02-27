@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Mesin 1",
+    "status": "on"
+  },
+  {
+    "id": 2,
+    "name": "Mesin 2",
+    "status": "off"
+  },
+  {
+    "id": 3,
+    "name": "Mesin 3",
+    "status": "on"
+  },
+  {
+    "id": 4,
+    "name": "Mesin 4",
+    "status": "off"
+  },
+  {
+    "id": 5,
+    "name": "Mesin 5",
+    "status": "on"
+  },
+  {
+    "id": 6,
+    "name": "Mesin 6",
+    "status": "off"
+  },
+  {
+    "id": 7,
+    "name": "Mesin 7",
+    "status": "on"
+  },
+  {
+    "id": 8,
+    "name": "Mesin 8",
+    "status": "off"
+  },
+  {
+    "id": 9,
+    "name": "Mesin 9",
+    "status": "on"
+  },
+  {
+    "id": 10,
+    "name": "Mesin 10",
+    "status": "on"
+  }
+]
