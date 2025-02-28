@@ -1,0 +1,41 @@
+[
+  {
+    "ring": "Ring 1",
+    "parameters": [
+      {
+        "name": "Compressor",
+        "description": "Hot Side First Stage Air…",
+        "stdMax": "40 m³",
+        "currentValue": 600
+      },
+      {
+        "name": "WTP",
+        "description": "Concentrate flow ro sys…",
+        "stdMax": "5 kg/cm²",
+        "currentValue": 7
+      }
+    ]
+  },
+  {
+    "ring": "Ring 2",
+    "parameters": [
+      {
+        "name": "Boiler 12 tph",
+        "description": "Hot Side First Stage Air…",
+        "stdMax": "40 m³",
+        "currentValue": 60
+      }
+    ]
+  },
+  {
+    "ring": "Ring 3",
+    "parameters": [
+      {
+        "name": "Boiler 12 tph",
+        "description": "Hot Side First Stage Air…",
+        "stdMax": "40 m³",
+        "currentValue": 60
+      }
+    ]
+  }
+]

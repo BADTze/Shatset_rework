@@ -9,7 +9,7 @@ export function MachinesCarousel() {
   const router = useRouter(); 
 
   return (
-    <Carousel className="w-full max-w-screen-2xl mx-auto">
+    <Carousel className="w-full max-w-[1700px] mx-auto">
       <CarouselContent>
         {data.map((machine) => (
           <CarouselItem key={machine.id} className="basis-1/5">

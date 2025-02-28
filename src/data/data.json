@@ -1,52 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Mesin 1",
-    "status": "on"
+    "name": "Compressor",
+    "status": "on",
+    "ring": "Ring 1"
   },
   {
     "id": 2,
-    "name": "Mesin 2",
-    "status": "off"
+    "name": "WTP",
+    "status": "off",
+    "ring": "Ring 1"
   },
   {
     "id": 3,
-    "name": "Mesin 3",
-    "status": "on"
+    "name": "Boiler 12 tph",
+    "status": "on",
+    "ring": "Ring 2"
   },
   {
     "id": 4,
-    "name": "Mesin 4",
-    "status": "off"
+    "name": "Compressor",
+    "status": "on",
+    "ring": "Ring 3"
   },
   {
     "id": 5,
-    "name": "Mesin 5",
-    "status": "on"
+    "name": "Compressor",
+    "status": "on",
+    "ring": "Ring 3"
   },
   {
     "id": 6,
-    "name": "Mesin 6",
-    "status": "off"
+    "name": "Compressor",
+    "status": "off",
+    "ring": "Ring 3"
   },
   {
     "id": 7,
-    "name": "Mesin 7",
-    "status": "on"
+    "name": "Compressor",
+    "status": "off",
+    "ring": "Ring 3"
   },
   {
     "id": 8,
-    "name": "Mesin 8",
-    "status": "off"
-  },
-  {
-    "id": 9,
-    "name": "Mesin 9",
-    "status": "on"
-  },
-  {
-    "id": 10,
-    "name": "Mesin 10",
-    "status": "on"
+    "name": "Compressor",
+    "status": "on",
+    "ring": "Ring 3"
   }
 ]
