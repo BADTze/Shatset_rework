@@ -1,4 +1,3 @@
-import Image from "next/image";
 import * as React from "react";
 import { MachinesCarousel } from "@/components/machines-carousel";
 import { OutspecParameters } from "@/components/outspec-params";

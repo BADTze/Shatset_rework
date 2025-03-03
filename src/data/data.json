@@ -1,50 +1,143 @@
 [
   {
-    "id": 1,
-    "name": "Compressor",
-    "status": "on",
-    "ring": "Ring 1"
+    "ring": "Ring 1",
+    "machines": [
+      {
+        "id": 1,
+        "name": "Compressor-1",
+        "status": "on",
+        "parameters": [
+          {
+            "name": "Hot Side First Stage Air Temperature",
+            "description": "Pressure measurement",
+            "uom": "40 m³",
+            "currentValue": 60,
+            "isOutspec": true
+          },
+          {
+            "name": "Cold Side First Stage Air Temperature",
+            "description": "Temperature measurement",
+            "uom": "30 °C",
+            "currentValue": 25,
+            "isOutspec": false
+          },
+          {
+            "name": "Hot Side Second Stage Air",
+            "description": "Pressure measurement",
+            "uom": "50 m³",
+            "currentValue": 55,
+            "isOutspec": true
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "WTP-1",
+        "status": "on",
+        "parameters": [
+          {
+            "name": "Concentrate flow",
+            "description": "Flow rate measurement",
+            "uom": "5 kg/cm²",
+            "currentValue": 7,
+            "isOutspec": true
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": 2,
-    "name": "WTP",
-    "status": "off",
-    "ring": "Ring 1"
+    "ring": "Ring 2",
+    "machines": [
+      {
+        "id": 3,
+        "name": "Compressor-2",
+        "status": "on",
+        "parameters": [
+          {
+            "name": "Hot Side First Stage Air",
+            "description": "Pressure measurement",
+            "uom": "40 m³",
+            "currentValue": 60,
+            "isOutspec": true
+          },
+          {
+            "name": "Cold Side First Stage Air Temperature",
+            "description": "Temperature measurement",
+            "uom": "30 °C",
+            "currentValue": 25,
+            "isOutspec": false
+          },
+          {
+            "name": "Hot Side Second Stage Air",
+            "description": "Pressure measurement",
+            "uom": "50 m³",
+            "currentValue": 55,
+            "isOutspec": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "WTP-2",
+        "status": "on",
+        "parameters": [
+          {
+            "name": "Concentrate flow",
+            "description": "Flow rate measurement",
+            "uom": "5 kg/cm²",
+            "currentValue": 7,
+            "isOutspec": true
+          }
+        ]
+      }
+    ]
   },
   {
-    "id": 3,
-    "name": "Boiler 12 tph",
-    "status": "on",
-    "ring": "Ring 2"
-  },
-  {
-    "id": 4,
-    "name": "Compressor",
-    "status": "on",
-    "ring": "Ring 3"
-  },
-  {
-    "id": 5,
-    "name": "Compressor",
-    "status": "on",
-    "ring": "Ring 3"
-  },
-  {
-    "id": 6,
-    "name": "Compressor",
-    "status": "off",
-    "ring": "Ring 3"
-  },
-  {
-    "id": 7,
-    "name": "Compressor",
-    "status": "off",
-    "ring": "Ring 3"
-  },
-  {
-    "id": 8,
-    "name": "Compressor",
-    "status": "on",
-    "ring": "Ring 3"
+    "ring": "Ring 3",
+    "machines": [
+      {
+        "id": 5,
+        "name": "Compressor-3",
+        "status": "on",
+        "parameters": [
+          {
+            "name": "Hot Side First Stage Air",
+            "description": "Pressure measurement",
+            "uom": "40 m³",
+            "currentValue": 60,
+            "isOutspec": true
+          },
+          {
+            "name": "Cold Side First Stage Air Temperature",
+            "description": "Temperature measurement",
+            "uom": "30 °C",
+            "currentValue": 25,
+            "isOutspec": false
+          },
+          {
+            "name": "Hot Side Second Stage Air",
+            "description": "Pressure measurement",
+            "uom": "50 m³",
+            "currentValue": 55,
+            "isOutspec": true
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "WTP-3",
+        "status": "on",
+        "parameters": [
+          {
+            "name": "Concentrate flow",
+            "description": "Flow rate measurement",
+            "uom": "5 kg/cm²",
+            "currentValue": 7,
+            "isOutspec": true
+          }
+        ]
+      }
+    ]
   }
 ]

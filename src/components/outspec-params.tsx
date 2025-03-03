@@ -1,21 +1,28 @@
 "use client";
 
-import data from "@/data/outspec-params.json";
-import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import data from "@/data/data.json"; 
+import { useRouter } from "next/navigation"; 
+import { Button } from "@/components/ui/button"; 
+import { Card } from "./ui/card";
 
-interface MachineParameter {
-  id: string; 
+interface Parameter {
   name: string;
   description: string;
-  stdMax: string;
+  uom: string;
   currentValue: number;
+  isOutspec: boolean;
+}
+
+interface Machine {
+  id: number;
+  name: string;
+  status: string;
+  parameters: Parameter[];
 }
 
 interface RingData {
   ring: string;
-  parameters: MachineParameter[];
+  machines: Machine[];
 }
 
 export function OutspecParameters() {
@@ -23,9 +30,9 @@ export function OutspecParameters() {
 
   return (
     <Card className="mt-8 w-full p-6 shadow-md">
-      <div className=" w-full">
+      <div className="w-full">
         <h2 className="text-xl font-bold mb-4">List Outspec Parameter</h2>
-        {(data as RingData[]).map((ring) => (
+        {data.map((ring: RingData) => (
           <div key={ring.ring} className="mb-6">
             <h3
               className={`text-lg font-semibold mb-2 ${
@@ -38,53 +45,62 @@ export function OutspecParameters() {
             >
               {ring.ring}
             </h3>
-            {ring.parameters.length > 0 ? (
-              <div className="space-y-3">
-                {ring.parameters.map((param, index) => (
-                  <div
-                    key={index}
-                    className="bg-gray-100 p-4 rounded-lg flex items-center justify-between gap-x-4 shadow-sm border"
-                  >
-                    <div className="w-1/5">
-                      <h4 className="font-medium text-base">{param.name}</h4>
+            {ring.machines.map((machine: Machine) => (
+              <div key={machine.id}>
+                {machine.parameters
+                  .filter((param) => param.isOutspec)
+                  .map((param, index) => (
+                    <div
+                      key={`${machine.id}-${param.name}`} 
+                      className="bg-gray-100 p-4 rounded-lg flex items-center justify-between gap-4 mb-2"
+                    >
+                      {/* Bagian 1: Nama Mesin dan Parameter */}
+                      <div className="w-1/3">
+                        <h4 className="font-medium">
+                          {machine.name} - {param.name}
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          {param.description}
+                        </p>
+                      </div>
+
+                      <div className="w-1/6">
+                        <p className="text-sm text-gray-600">
+                          UOM: {param.uom}
+                        </p>
+                      </div>
+
+                      <div className="w-1/6">
+                        <p
+                          className={`text-sm font-semibold ${
+                            param.currentValue > parseInt(param.uom)
+                              ? "text-red-500"
+                              : "text-green-500"
+                          }`}
+                        >
+                          Current: {param.currentValue}
+                        </p>
+                      </div>
+
+                      {/* Bagian 4: Tombol Detail */}
+                      <div className="w-1/6 flex justify-end">
+                        <Button
+                          onClick={() =>
+                            router.push(
+                              `/machines/${
+                                machine.id
+                              }?ring=${ring.ring.toLowerCase()}`
+                            )
+                          }
+                          className="bg-white text-black hover:bg-gray-200"
+                        >
+                          Detail
+                        </Button>
+                      </div>
                     </div>
-                    <div className="w-1/3">
-                      <p className="text-sm text-gray-600">{param.description}</p>
-                    </div>
-                    <div className="w-1/6">
-                      <p className="text-sm text-gray-600 font-medium">
-                        Max: {param.stdMax}
-                      </p>
-                    </div>
-                    <div className="w-1/6">
-                      <p
-                        className={`text-sm font-semibold ${
-                          param.currentValue > parseInt(param.stdMax)
-                            ? "text-red-500"
-                            : "text-green-500"
-                        }`}
-                      >
-                        Current: {param.currentValue}
-                      </p>
-                    </div>
-                    <div className="w-1/6 flex justify-end">
-                      <Button
-                        onClick={() =>
-                          router.push(
-                            `/ring-${ring.ring.toLowerCase()}/machines/${param.id}`
-                          )
-                        }
-                        className="bg-white text-black hover:bg-gray-200 px-4 py-2"
-                      >
-                        Detail
-                      </Button>
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
-            ) : (
-              <p className="text-gray-500">No outspec parameters.</p>
-            )}
+            ))}
           </div>
         ))}
       </div>
