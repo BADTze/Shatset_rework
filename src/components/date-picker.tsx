@@ -5,6 +5,7 @@ import { populateYears } from "@/lib/utils";
 import moment from "moment";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useState } from "react";
+import { Button } from "./ui/button";
 
 const DateRangePicker = () => {
   const router = useRouter();
@@ -36,7 +37,7 @@ const DateRangePicker = () => {
       <select
         value={mode}
         onChange={(e) => setMode(e.target.value)}
-        className="select select-bordered select-primary w-full max-w-xs text-gray-800"
+        className="select select-bordered select-primary w-full max-w-xs text-gray-800 p-2 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <option value="" disabled hidden>
           Mode
@@ -50,7 +51,7 @@ const DateRangePicker = () => {
         <select
           value={year}
           onChange={(e) => setYear(e.target.value)}
-          className="select select-bordered select-primary w-full max-w-xs text-gray-800"
+          className="select select-bordered select-primary w-full max-w-xs text-gray-800 p-2 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="" disabled hidden>
             Year
@@ -67,12 +68,12 @@ const DateRangePicker = () => {
         <select
           value={month}
           onChange={(e) => setMonth(e.target.value)}
-          className="select select-bordered select-primary w-full max-w-xs text-gray-800"
+          className="select select-bordered select-primary w-full max-w-xs text-gray-800 p-2 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="" disabled hidden>
             Month
           </option>
-          {MONTHS.map(({ char, id, numeric }) => (
+          {MONTHS.map(({ char, numeric }) => (
             <option key={numeric} value={numeric}>
               {char}
             </option>
@@ -85,18 +86,17 @@ const DateRangePicker = () => {
           value={date}
           type="date"
           placeholder="Date"
-          className="input input-bordered input-primary w-[200px] flex-shrink-0 text-gray-800"
+          className="input input-bordered input-primary w-[200px] flex-shrink-0 text-gray-800 p-2 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => setDate(e.target.value)}
         />
       )}
 
-      <button
-        className="btn text-white"
-        style={{ backgroundColor: "rgba(239,103,41,255)" }}
+      <Button
+        className="btn text-black font-bold px-6 py-2 rounded-full bg-[#f8da91] hover:bg-[#ebc979] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#f8da91]"
         onClick={handleSubmit}
       >
         Submit
-      </button>
+      </Button>
     </div>
   );
 };

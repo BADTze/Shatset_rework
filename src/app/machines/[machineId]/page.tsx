@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import data from "@/data/data.json";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import DateRangePicker from "@/components/date-picker";
 
 interface Parameter {
   name: string;
@@ -47,13 +48,15 @@ export default function MachineDetail({
   }
 
   return (
-    <div className="p-8">
-
-      <Link href={"/"}>
-        <Button className="mb-4 bg-gray-500 text-white hover:bg-gray-600">
-          Back to Home
-        </Button>
-      </Link>
+    <div className="p-5">
+      <header className="flex justify-between items-center py-4 px-6 mb-4  border-gray-800 bg-gray-100 shadow-md">
+        <Link href="/">
+          <Button className="btn text-black font-bold px-6 py-2 rounded-full bg-[#f8da91] hover:bg-[#ebc979] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#f8da91]">
+            Back to Home
+          </Button>
+        </Link>
+        <DateRangePicker/>
+      </header>
 
       <div className="bg-gray-100 p-6 rounded-lg">
         <h2 className="text-xl font-semibold">{machine.name}</h2>
