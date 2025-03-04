@@ -29,19 +29,20 @@ export function OutspecParameters() {
   const router = useRouter();
 
   return (
-    <Card className="mt-8 w-full p-6 shadow-md">
+    <Card className="mt-8 w-full p-6 shadow-md bg-[#f8da91]">
       <div className="w-full">
         <h2 className="text-xl font-bold mb-4">List Outspec Parameter</h2>
         {data.map((ring: RingData) => (
           <div key={ring.ring} className="mb-6">
             <h3
-              className={`text-lg font-semibold mb-2 ${
-                ring.ring === "Ring 1"
-                  ? "text-blue-500"
-                  : ring.ring === "Ring 2"
-                  ? "text-green-500"
-                  : "text-orange-500"
-              }`}
+            className="text-lg font-bold mb-2"
+              // className={`text-lg font-semibold mb-2 ${
+              //   ring.ring === "Ring 1"
+              //     ? "text-blue-500"
+              //     : ring.ring === "Ring 2"
+              //     ? "text-green-500"
+              //     : "text-orange-500"
+              // }`}
             >
               {ring.ring}
             </h3>
@@ -86,11 +87,7 @@ export function OutspecParameters() {
                       <div className="w-1/6 flex justify-end">
                         <Button
                           onClick={() =>
-                            router.push(
-                              `/machines/${
-                                machine.id
-                              }?ring=${ring.ring.toLowerCase()}`
-                            )
+                            router.push(`/machines/${machine.id}?ring=${ring.ring.toLowerCase()}`)
                           }
                           className="bg-white text-black hover:bg-gray-200"
                         >

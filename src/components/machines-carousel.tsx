@@ -3,7 +3,7 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import data from "@/data/data.json"; 
 import { useRouter } from "next/navigation"; 
-import { Button } from "@/components/ui/button"; // Tombol dari shadcn
+import { Button } from "@/components/ui/button";
 
 interface Parameter {
   name: string;
@@ -29,7 +29,7 @@ export function MachinesCarousel() {
   const router = useRouter();
 
   return (
-    <Carousel className="w-full max-w-screen-2xl mx-auto">
+    <Carousel className=" w-full max-w-8xl mx-auto">
       <CarouselContent>
         {data.flatMap((ring: RingData) =>
           ring.machines.map((machine: Machine) => (
@@ -67,8 +67,8 @@ export function MachinesCarousel() {
           ))
         )}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      {/* <CarouselPrevious />
+      <CarouselNext /> */}
     </Carousel>
   );
 }

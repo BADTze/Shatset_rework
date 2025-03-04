@@ -25,7 +25,7 @@ interface RingData {
   machines: Machine[];
 }
 
-export default function MachineDetail({
+export default async function MachineDetail({
   params,
   searchParams,
 }: {
@@ -33,7 +33,7 @@ export default function MachineDetail({
   searchParams: { ring: string };
 }) {
   const machineId = parseInt(params.machineId);
-  const { ring } = searchParams;
+  const ring = searchParams.ring;
 
   const ringData: RingData | undefined = data.find(
     (r) => r.ring.toLowerCase() === ring.toLowerCase()
@@ -55,10 +55,10 @@ export default function MachineDetail({
             Back to Home
           </Button>
         </Link>
-        <DateRangePicker/>
+        <DateRangePicker />
       </header>
 
-      <div className="bg-gray-100 p-6 rounded-lg">
+      <div className="bg-gray-100 p-4 rounded-lg">
         <h2 className="text-xl font-semibold">{machine.name}</h2>
         <p className="text-sm text-gray-500">Status: {machine.status}</p>
 

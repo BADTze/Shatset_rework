@@ -105,8 +105,8 @@
             "name": "Hot Side First Stage Air",
             "description": "Pressure measurement",
             "uom": "40 m³",
-            "currentValue": 60,
-            "isOutspec": true
+            "currentValue": 20,
+            "isOutspec": false
           },
           {
             "name": "Cold Side First Stage Air Temperature",
@@ -119,8 +119,8 @@
             "name": "Hot Side Second Stage Air",
             "description": "Pressure measurement",
             "uom": "50 m³",
-            "currentValue": 55,
-            "isOutspec": true
+            "currentValue": 45,
+            "isOutspec": false
           }
         ]
       },
