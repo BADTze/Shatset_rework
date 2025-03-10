@@ -9,8 +9,9 @@ interface Parameter {
   name: string;
   description: string;
   uom: string;
+  std_max: number;
+  std_min: number;
   currentValue: number;
-  isOutspec: boolean;
 }
 
 interface Machine {
@@ -29,7 +30,7 @@ export function MachinesCarousel() {
   const router = useRouter();
 
   return (
-    <Carousel className=" w-full max-w-8xl mx-auto">
+    <Carousel className="w-full max-w-8xl mx-auto">
       <CarouselContent>
         {data.flatMap((ring: RingData) =>
           ring.machines.map((machine: Machine) => (
@@ -46,7 +47,6 @@ export function MachinesCarousel() {
                       {machine.status}
                     </span>
                   </div>
-
                   <div className="text-center">
                     <h3 className="text-lg font-semibold">{machine.name}</h3>
                   </div>

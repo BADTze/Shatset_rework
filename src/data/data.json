@@ -10,23 +10,34 @@
           {
             "name": "Hot Side First Stage Air Temperature",
             "description": "Pressure measurement",
-            "uom": "40 m³",
-            "currentValue": 60,
-            "isOutspec": true
+            "uom": "m³",
+            "std_max": 60,
+            "std_min": 0,
+            "currentValue": 60
           },
           {
             "name": "Cold Side First Stage Air Temperature",
             "description": "Temperature measurement",
-            "uom": "30 °C",
-            "currentValue": 25,
-            "isOutspec": false
+            "uom": "°C",
+            "std_max": 40,
+            "std_min": 10,
+            "currentValue": 25
           },
           {
-            "name": "Hot Side Second Stage Air",
+            "name": "Hot Side Second Stage Air Temperature",
             "description": "Pressure measurement",
-            "uom": "50 m³",
-            "currentValue": 55,
-            "isOutspec": true
+            "uom": "m³",
+            "std_max": 60,
+            "std_min": 0,
+            "currentValue": 60
+          },
+          {
+            "name": "Cold Side Second Stage Air Temperature",
+            "description": "Temperature measurement",
+            "uom": "°C",
+            "std_max": 40,
+            "std_min": 10,
+            "currentValue": 25
           }
         ]
       },
@@ -36,11 +47,20 @@
         "status": "on",
         "parameters": [
           {
-            "name": "Concentrate flow",
+            "name": "Filter A in pressure WTP RO unit 2",
             "description": "Flow rate measurement",
-            "uom": "5 kg/cm²",
-            "currentValue": 7,
-            "isOutspec": true
+            "uom": "kg/cm²",
+            "std_max": 5,
+            "std_min": 1,
+            "currentValue": 7
+          },
+          {
+            "name": "Concentrate flow",
+            "description": "Filter B in pressure WTP RO unit 2",
+            "uom": "kg/cm²",
+            "std_max": 10,
+            "std_min": 1,
+            "currentValue": 7
           }
         ]
       }
@@ -55,25 +75,36 @@
         "status": "on",
         "parameters": [
           {
-            "name": "Hot Side First Stage Air",
+            "name": "Hot Side First Stage Air Temperature",
             "description": "Pressure measurement",
-            "uom": "40 m³",
-            "currentValue": 60,
-            "isOutspec": true
+            "uom": "m³",
+            "std_max": 60,
+            "std_min": 0,
+            "currentValue": 60
           },
           {
             "name": "Cold Side First Stage Air Temperature",
             "description": "Temperature measurement",
-            "uom": "30 °C",
-            "currentValue": 25,
-            "isOutspec": false
+            "uom": "°C",
+            "std_max": 40,
+            "std_min": 10,
+            "currentValue": 25
           },
           {
-            "name": "Hot Side Second Stage Air",
+            "name": "Hot Side Second Stage Air Temperature",
             "description": "Pressure measurement",
-            "uom": "50 m³",
-            "currentValue": 55,
-            "isOutspec": true
+            "uom": "m³",
+            "std_max": 60,
+            "std_min": 0,
+            "currentValue": 60
+          },
+          {
+            "name": "Cold Side Second Stage Air Temperature",
+            "description": "Temperature measurement",
+            "uom": "°C",
+            "std_max": 40,
+            "std_min": 10,
+            "currentValue": 25
           }
         ]
       },
@@ -83,11 +114,20 @@
         "status": "on",
         "parameters": [
           {
-            "name": "Concentrate flow",
+            "name": "Filter A in pressure WTP RO unit 2",
             "description": "Flow rate measurement",
-            "uom": "5 kg/cm²",
-            "currentValue": 7,
-            "isOutspec": true
+            "uom": "kg/cm²",
+            "std_max": 5,
+            "std_min": 1,
+            "currentValue": 7
+          },
+          {
+            "name": "Concentrate flow",
+            "description": "Filter B in pressure WTP RO unit 2",
+            "uom": "kg/cm²",
+            "std_max": 10,
+            "std_min": 1,
+            "currentValue": 7
           }
         ]
       }
@@ -102,25 +142,36 @@
         "status": "on",
         "parameters": [
           {
-            "name": "Hot Side First Stage Air",
+            "name": "Hot Side First Stage Air Temperature",
             "description": "Pressure measurement",
-            "uom": "40 m³",
-            "currentValue": 20,
-            "isOutspec": false
+            "uom": "m³",
+            "std_max": 60,
+            "std_min": 0,
+            "currentValue": 60
           },
           {
             "name": "Cold Side First Stage Air Temperature",
             "description": "Temperature measurement",
-            "uom": "30 °C",
-            "currentValue": 25,
-            "isOutspec": false
+            "uom": "°C",
+            "std_max": 40,
+            "std_min": 10,
+            "currentValue": 25
           },
           {
-            "name": "Hot Side Second Stage Air",
+            "name": "Hot Side Second Stage Air Temperature",
             "description": "Pressure measurement",
-            "uom": "50 m³",
-            "currentValue": 45,
-            "isOutspec": false
+            "uom": "m³",
+            "std_max": 60,
+            "std_min": 0,
+            "currentValue": 65
+          },
+          {
+            "name": "Cold Side Second Stage Air Temperature",
+            "description": "Temperature measurement",
+            "uom": "°C",
+            "std_max": 40,
+            "std_min": 10,
+            "currentValue": 25
           }
         ]
       },
@@ -130,11 +181,20 @@
         "status": "on",
         "parameters": [
           {
-            "name": "Concentrate flow",
+            "name": "Filter A in pressure WTP RO unit 2",
             "description": "Flow rate measurement",
-            "uom": "5 kg/cm²",
-            "currentValue": 7,
-            "isOutspec": true
+            "uom": "kg/cm²",
+            "std_max": 5,
+            "std_min": 1,
+            "currentValue": 2
+          },
+          {
+            "name": "Concentrate flow",
+            "description": "Filter B in pressure WTP RO unit 2",
+            "uom": "kg/cm²",
+            "std_max": 10,
+            "std_min": 1,
+            "currentValue": 2
           }
         ]
       }
