@@ -55,7 +55,7 @@ export default async function MachineDetail({
             Back to Home
           </Button>
         </Link>
-        <DateRangePicker />
+        <DateRangePicker/>
       </header>
 
       <div className="bg-[#2c3e3a] text-white p-4 rounded-lg">
@@ -76,12 +76,12 @@ export default async function MachineDetail({
                 >
                   <div className="flex-1">
                     <h4 className="font-medium text-black">{param.name}</h4>
-                    <p className="text-sm text-gray-600">{param.description}</p>
+                    {/* <p className="text-sm text-gray-600">{param.description}</p> */}
                   </div>
-                  <div className="flex-1 text-right">
+                  <div className="flex-1">
                     <p className="text-sm text-gray-600">UOM: {param.uom}</p>
                   </div>
-                  <div className="flex-1 text-right">
+                  <div className="flex-1 ">
                     <p
                       className={`text-sm font-semibold ${
                         isOutspec ? "text-red-500" : "text-green-500"

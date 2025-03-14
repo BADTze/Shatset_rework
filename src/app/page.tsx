@@ -5,7 +5,7 @@ import { OutspecParameters } from "@/components/outspec-params";
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px]">
-      <main className="flex flex-col gap-8 row-start-2 mx-3 items-center sm:items-start">
+      <main className="flex flex-col gap-5 row-start-2 mx-3 items-center sm:items-start">
         <MachinesCarousel />
         <OutspecParameters/>
       </main>
