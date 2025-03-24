@@ -30,7 +30,7 @@ export function OutspecParameters() {
   const router = useRouter();
 
   return (
-    <Card className="mt-5 w-full p-6 shadow-md bg-[#f8da91]">
+    <Card className=" w-full p-6 shadow-md bg-[#f8da91]">
       <div className="w-full">
         <h2 className="text-xl font-bold mb-4">List Outspec Parameters</h2>
         {data.map((ring: RingData) => (

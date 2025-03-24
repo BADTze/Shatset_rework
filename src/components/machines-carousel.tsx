@@ -10,7 +10,6 @@ import {
 import data from "@/data/data.json";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 interface Parameter {
   name: string;
@@ -37,11 +36,11 @@ export function MachinesCarousel() {
   const router = useRouter();
 
   return (
-    <Carousel className="w-full max-w-8xl mx-auto">
+      <Carousel className="relative w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <CarouselContent>
         {data.flatMap((ring: RingData) =>
           ring.machines.map((machine: Machine) => (
-            <CarouselItem key={machine.id} className="basis-1/5">
+            <CarouselItem key={machine.id} className="basis-1/3">
               <div className="p-1">
                 <div className="group h-64 w-full bg-[#3c5652] rounded-lg flex flex-col justify-between relative overflow-hidden">
                   {/* Gambar Mesin dengan Opacity Rendah */}
@@ -49,16 +48,18 @@ export function MachinesCarousel() {
                     <img
                       src="/CompressorABC.png"
                       alt={machine.name}
-                      className="w-full h-full object-cover opacity-50" 
+                      className="w-full h-full object-cover opacity-50"
                     />
                   </div>
-  
+
                   {/* Overlay untuk Teks */}
                   <div className="relative z-10 p-4 flex flex-col justify-between h-full">
                     <div className="flex items-center">
                       <div
                         className={`w-6 h-6 rounded-full ${
-                          machine.status === "on" ? "bg-green-500" : "bg-red-500"
+                          machine.status === "on"
+                            ? "bg-green-500"
+                            : "bg-red-500"
                         }`}
                       />
                       <span className="ml-2 text-sm font-medium text-white">
@@ -71,13 +72,15 @@ export function MachinesCarousel() {
                       </h3>
                     </div>
                   </div>
-  
+
                   {/* Tombol Detail (Muncul saat Hover) */}
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20">
                     <Button
                       onClick={() =>
                         router.push(
-                          `/machines/${machine.id}?ring=${ring.ring.toLowerCase()}`
+                          `/machines/${
+                            machine.id
+                          }?ring=${ring.ring.toLowerCase()}`
                         )
                       }
                       className="bg-white text-black hover:bg-gray-200"
@@ -91,8 +94,8 @@ export function MachinesCarousel() {
           ))
         )}
       </CarouselContent>
-      {/* <CarouselPrevious />
-      <CarouselNext /> */}
+      <CarouselPrevious className="absolute w-12 h-12 top-1/2 left-2 transform -translate-y-1/2 z-10"/>
+      <CarouselNext className="absolute w-12 h-12 top-1/2 right-2 transform -translate-y-1/2 z-10"/>
     </Carousel>
   );
 }

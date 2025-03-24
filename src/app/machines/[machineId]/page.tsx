@@ -34,15 +34,12 @@ export default async function MachineDetail({
 }) {
   const machineId = parseInt(params.machineId);
   const ring = searchParams.ring;
-
   const ringData: RingData | undefined = data.find(
     (r) => r.ring.toLowerCase() === ring.toLowerCase()
   );
-
   const machine: Machine | undefined = ringData?.machines.find(
     (m) => m.id === machineId
   );
-
   if (!machine) {
     notFound();
   }
