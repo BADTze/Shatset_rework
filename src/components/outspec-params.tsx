@@ -7,7 +7,6 @@ import { Card } from "@/components/ui/card";
 
 interface Parameter {
   name: string;
-  // description: string;
   uom: string;
   std_max: number;
   std_min: number;
@@ -54,9 +53,6 @@ export function OutspecParameters() {
                         <h4 className="font-medium">
                           {machine.name} - {param.name}
                         </h4>
-                        {/* <p className="text-sm text-gray-600">
-                          {param.description}
-                        </p> */}
                       </div>
                       <div className="w-1/6">
                         <p className="text-sm text-gray-600">UOM: {param.uom}</p>
