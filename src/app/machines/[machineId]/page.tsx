@@ -32,8 +32,11 @@ export default async function MachineDetail({
   params: { machineId: string };
   searchParams: { ring: string };
 }) {
-  const machineId = parseInt(params.machineId);
-  const ring = searchParams.ring;
+  const awaitedparams = await params
+  const machineId = parseInt(awaitedparams.machineId);
+  const awaitedsearchparams= await searchParams
+  const ring = awaitedsearchparams.ring;
+
   const ringData: RingData | undefined = data.find(
     (r) => r.ring.toLowerCase() === ring.toLowerCase()
   );
